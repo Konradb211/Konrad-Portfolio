@@ -11,7 +11,7 @@ const Nav = () => {
 	}
 
 	return (
-		<nav className='fixed w-full bg-black py-5 shadow-xl shadow-black/10'>
+		<nav className='fixed w-full bg-black py-5 shadow-xl shadow-black/10 z-10'>
 			{/* Desktop nav */}
 			<div className='hidden md:flex justify-between max-width px-4'>
 				<div>

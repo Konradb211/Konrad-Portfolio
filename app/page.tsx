@@ -1,4 +1,4 @@
-import { AboutMe, Header, Title } from "@/components"
+import { Experience, Header, Projects, Title } from "@/components"
 import React from "react"
 
 const Page = () => {
@@ -9,7 +9,9 @@ const Page = () => {
 			</header>
 			<main>
 				<Title>Experience</Title>
-				<AboutMe />
+				<Experience />
+				<Title>Projects</Title>
+				<Projects />
 			</main>
 		</>
 	)

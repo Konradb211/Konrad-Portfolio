@@ -1,7 +1,7 @@
 "use client"
-import { profileImages, profileLinks, skillsItems } from "@/constants"
+import { profileImages, profileLinks } from "@/constants"
 import Image from "next/image"
-import Link from "next/link"
+
 
 const Header = () => {
 	return (
@@ -28,11 +28,13 @@ const Header = () => {
 
 					<div className='flex gap-2'>
 						{profileLinks.map((link, index) => (
-							<Link
+							<a
 								key={link.href}
 								href={link.href}
 								rel='noopener noreferrer'
-								target='_blank'>
+								target='_blank'
+								{...(index + 1 === 3 ? { download: true } : {})}
+							>
 								<Image
 									src={profileImages[index].src}
 									alt={profileImages[index].alt}
@@ -40,7 +42,7 @@ const Header = () => {
 									height={25}
 									className='size-9'
 								/>
-							</Link>
+							</a>
 						))}
 					</div>
 				</div>
